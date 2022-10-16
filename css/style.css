@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    background-color: rgb(25, 25, 25);
+
+}
+
+img {
+    max-width: 730px;
+    height:100% ;
+}
+
+.wrapper    {
+margin: 0 auto;
+    max-width: 1143px;
+    height: 100vh;
+
+    border-radius: 2%;
+}
+.header {
+    
+    height: 120px;   
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.header_title   {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+	-webkit-text-fill-color: transparent;
+    background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: header_title   2s ease infinite;
+  animation: header_title   2s ease infinite;
+  
+}
+ 
+@-webkit-keyframes header_title   {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes header_title   {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+    
+
+.box {
+    display: flex;
+    justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ width: 600px;
+}
+.search-box {
+    display: flex;
+    margin-bottom: 30px;
+}
+.search {
+    width: 500px;
+    height: 31px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.btn_search {
+   width: 30px;
+   height: inherit;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+   -webkit-text-fill-color: transparent;
+   background-size: 500% 500%;
+ -webkit-background-clip:unset;
+ -webkit-text-fill-color: transparent;
+ -webkit-animation: btn_search   2s ease infinite;
+ animation: btn_search   2s ease infinite;
+   
+}
+.search_img {
+    width: 20px;
+    height:21px;
+}
+
+.js-container   {
+    display: flex;
+    justify-content: center;
+    max-width: 730px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
