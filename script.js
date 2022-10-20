@@ -9,7 +9,6 @@ myInput.addEventListener('keypress', (event) => {
     if (event.key === "Enter") {
         event.preventDefault();
       document.querySelector('.btn_search').click();
-      sendRequest();
 }})
 
 
