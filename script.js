@@ -1,24 +1,37 @@
 
 let button = document.querySelector('.btn_search');
-
 button.addEventListener("click",() => {
-    sendApiRequest()
-})
+    document.querySelector('.js-container').innerHTML = '';
+    sendRequest();
+});
+let myInput = document.querySelector('#input');
+myInput.addEventListener('keypress', (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+      document.querySelector('.btn_search').click();
+      sendRequest();
+}})
 
 
+ async  function sendRequest(){
+    let limit = 12;
+    let input = document.querySelector('.search').value;
+    let url = `https://api.giphy.com/v1/gifs/search?api_key=PIx9dTI3zYARjcMAmXy3CD8dp4jGA4bc&q=${input}&limit=${limit}`;
 
-async   function sendApiRequest()   {    
-    let input =  document.querySelector(".search").value
-    let response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=PIx9dTI3zYARjcMAmXy3CD8dp4jGA4bc&q=${input}`)
-    console.log(response)
-    let gifs = await response.json()
-    console.log(gifs)
-    useApiData(gifs)
-    
+    let response = await fetch(url);    
+    const result= await response.json();
+    getRequest(result);
+
 };
 
-
-function useApiData(gifs){
-    document.querySelector(".js-container").innerHTML = `<img src = "${gifs.data[0].images.original.url}">`
-    
-}
+ function getRequest(result) {
+        
+        result.data.forEach((dataItem) => {
+            const div = document.querySelector('.js-container');
+            const show = document.createElement('div');
+            show.classList.add('js-box');
+            div.appendChild(show);
+            show.style.background = `url(${dataItem.images.original.url}) no-repeat`;
+           
+        });    
+ }

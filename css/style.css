@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     padding: 0;
@@ -7,21 +9,22 @@ body{
 
 }
 
-img {
-    max-width: 730px;
-    height:100% ;
+.gifs_logo  {
+    max-height: 50px;
+    height: 100%;
+    max-width: 50px;
+    width: 100%;
 }
 
 .wrapper    {
 margin: 0 auto;
     max-width: 1143px;
+    width: 100%;
     height: 100vh;
 
     border-radius: 2%;
 }
 .header {
-    
-    height: 120px;   
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -34,7 +37,7 @@ margin: 0 auto;
     font-size: 30px;
     margin: 0 auto;
     text-transform: uppercase;
-    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    background-color: #fff;
 	-webkit-text-fill-color: transparent;
     background-size: 500% 500%;
   -webkit-background-clip: text;
@@ -43,18 +46,7 @@ margin: 0 auto;
   animation: header_title   2s ease infinite;
   
 }
- 
-@-webkit-keyframes header_title   {
-  0% { background-position: 0% 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0% 50% }
-}
- 
-@keyframes header_title   {
-  0% { background-position: 0% 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0% 50% }
-}
+
     
 
 .box {
@@ -62,9 +54,12 @@ margin: 0 auto;
     justify-content: center;
  align-items: center;
  margin: 0 auto;
- width: 600px;
+ max-width: 600px;
+ width: 100%;
 }
 .search-box {
+    max-width: 600px;
+    width: 100%;
     display: flex;
     margin-bottom: 30px;
 }
@@ -81,8 +76,8 @@ margin: 0 auto;
    height: inherit;
    border: none;
    outline: none;
+   background-color: #fff;
    cursor: pointer;
-   background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
    -webkit-text-fill-color: transparent;
    background-size: 500% 500%;
  -webkit-background-clip:unset;
@@ -99,8 +94,23 @@ margin: 0 auto;
 .js-container   {
     display: flex;
     justify-content: center;
-    max-width: 730px;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.js-box {
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+height: 100%;
+    margin: 1rem 1rem;
+    
+}
+.js-box img {
+    max-height: 250px;
+    max-width: 250px;
     width: 100%;
     height: 100%;
-    margin: 0 auto;
 }
