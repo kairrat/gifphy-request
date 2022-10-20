@@ -42,8 +42,7 @@ margin: 0 auto;
     background-size: 500% 500%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: header_title   2s ease infinite;
-  animation: header_title   2s ease infinite;
+  
   
 }
 
@@ -82,9 +81,7 @@ margin: 0 auto;
    background-size: 500% 500%;
  -webkit-background-clip:unset;
  -webkit-text-fill-color: transparent;
- -webkit-animation: btn_search   2s ease infinite;
- animation: btn_search   2s ease infinite;
-   
+
 }
 .search_img {
     width: 20px;
